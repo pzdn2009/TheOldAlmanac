@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D98493C3-8525-43E0-AC49-0A4BEAFD2AFF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>老黄历</RootNamespace>
+    <AssemblyName>老黄历</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DgvViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Rule\FieldTypeName.cs" />
+    <Compile Include="Form\RuleForm\ComplexRuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RuleForm\ComplexRuleForm.Designer.cs">
+      <DependentUpon>ComplexRuleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rule\ComplexRuleResolver.cs" />
+    <Compile Include="ChineseCalendar\LunarDate\ILunarDate.cs" />
+    <Compile Include="ChineseCalendar\LunarDate\LunarYear.cs" />
+    <Compile Include="ChineseCalendar\LunarDate\LunarDay.cs" />
+    <Compile Include="ChineseCalendar\LunarDate\LunarMonth.cs" />
+    <Compile Include="Rule\Checker.cs" />
+    <Compile Include="ChineseCalendar\HEType.cs" />
+    <Compile Include="Common\LunarCommon.cs" />
+    <Compile Include="Common\HEMathHelper.cs" />
+    <Compile Include="ChineseCalendar\LunarDate\LunarHour.cs" />
+    <Compile Include="Common\RuleFileConfig.cs" />
+    <Compile Include="Rule\DataForResolver.cs" />
+    <Compile Include="Form\SelectForm\DaySelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SelectForm\DaySelectForm.Designer.cs">
+      <DependentUpon>DaySelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SelectForm\HESelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SelectForm\HESelectForm.Designer.cs">
+      <DependentUpon>HESelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SelectForm\MonthSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SelectForm\MonthSelectForm.Designer.cs">
+      <DependentUpon>MonthSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rule\SingleRule.cs" />
+    <Compile Include="Common\StaticTable.cs" />
+    <Compile Include="UserControl\PermanentCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\PermanentCalendar.Designer.cs">
+      <DependentUpon>PermanentCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\RuleForm\RuleCreateAndEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\RuleForm\RuleCreateAndEdit.Designer.cs">
+      <DependentUpon>RuleCreateAndEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChineseCalendar\CnLunarCalendar.cs" />
+    <Compile Include="Form\SelectForm\SeasonSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SelectForm\SeasonSelectForm.Designer.cs">
+      <DependentUpon>SeasonSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SelectForm\SelectFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SelectForm\SelectFormBase.Designer.cs">
+      <DependentUpon>SelectFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChineseCalendar\TwentyEightLunarMansions.cs" />
+    <Compile Include="Form\SelectForm\TwentyEightMansionsSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SelectForm\TwentyEightMansionsSelectForm.Designer.cs">
+      <DependentUpon>TwentyEightMansionsSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChineseCalendar\HE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\RuleForm\ComplexRuleForm.resx">
+      <DependentUpon>ComplexRuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SelectForm\DaySelectForm.resx">
+      <DependentUpon>DaySelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SelectForm\HESelectForm.resx">
+      <DependentUpon>HESelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RuleForm\RuleCreateAndEdit.resx">
+      <DependentUpon>RuleCreateAndEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\PermanentCalendar.resx">
+      <DependentUpon>PermanentCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SelectForm\MonthSelectForm.resx">
+      <DependentUpon>MonthSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SelectForm\SeasonSelectForm.resx">
+      <DependentUpon>SeasonSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SelectForm\TwentyEightMansionsSelectForm.resx">
+      <DependentUpon>TwentyEightMansionsSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rules.xml" />
+    <Content Include="SampleRuleXML\Rules.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

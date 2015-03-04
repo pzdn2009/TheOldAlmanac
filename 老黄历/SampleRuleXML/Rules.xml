@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+  <!--<Rule name="">
+    <Description></Description>
+    <MessageFormat></MessageFormat>
+    <ShouldAvoid></ShouldAvoid>
+    <Value></Value>
+  </Rule>-->
+  <Rule Name="婚姻排除日">
+    <Description>朔望原来不嫁娶</Description>
+    <MessageFormat>{0}不宜结婚</MessageFormat>
+    <ShouldAvoid>0</ShouldAvoid>
+    <Value>(日:初一|初七|初九|十五|廿三|廿五)</Value>
+  </Rule>
+  <Rule Name="婚姻忌宿歌">
+    <Description>婚姻不犯此，夫妇乐无忧！</Description>
+    <MessageFormat>{0}不宜结婚！</MessageFormat>
+    <ShouldAvoid>0</ShouldAvoid>
+    <Value>(星宿:亢|氐|心|鬼|翼|昂|牛)</Value>
+  </Rule>
+  <Rule Name="四孟之月天皇星">
+    <Description>四孟之月起妖星！</Description>
+    <MessageFormat>{0}是天皇銮驾</MessageFormat>
+    <ShouldAvoid>1</ShouldAvoid>
+    <Value>(月:正|四|七|十)而且(日甲子:壬午|乙酉|丙子|丁卯|癸卯|壬子|辛酉)</Value>
+  </Rule>
+</Rules>
